@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Weather Pulse</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Global Weather Pulse</h1>
+        <p>Real-time data for every corner of the world.</p>
+      </header>
+
+      <main>
+        <div class="search-container">
+          <div class="dropdown-group">
+            <select id="country-select">
+              <option value="" disabled selected>Select a country...</option>
+            </select>
+          </div>
+          <div class="dropdown-group">
+            <select id="city-select" disabled>
+              <option value="" disabled selected>Select a city...</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="weather-card" class="glass-card hidden">
+          <div class="card-header">
+            <h2 id="country-name"></h2>
+            <img id="country-flag" src="" alt="" class="flag-icon">
+          </div>
+          <div class="weather-info">
+            <div class="temp-display">
+              <span id="temperature">--</span>°C
+            </div>
+            <div id="weather-desc" class="condition">--</div>
+            <div class="details">
+              <div class="detail-item">
+                <span>Wind</span>
+                <span id="wind-speed">-- km/h</span>
+              </div>
+              <div class="detail-item">
+                <span>Humidity</span>
+                <span id="humidity">--%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="loader" class="loader hidden"></div>
+      </main>
+      
+      <footer>
+        <p>Data by Open-Meteo & REST Countries</p>
+      </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
